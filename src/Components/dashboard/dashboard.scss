@@ -2,13 +2,11 @@ p,
 h1,
 h2,
 h3,
+ul,
+li,
 h4 {
   padding: 0;
   margin: 0;
-}
-
-.container {
-  margin-left: 70px;
 }
 
 .dashboard-container {
@@ -19,6 +17,7 @@ h4 {
   margin-left: 70px;
   border: 1px solid #d9d9d9;
   position: relative;
+  width: 300px;
 }
 
 .dashboard__top {
@@ -27,6 +26,7 @@ h4 {
     font-size: 20px;
   }
   &--search {
+    margin: 10px 0;
     input {
       border: none;
       padding: 10px;
@@ -34,6 +34,51 @@ h4 {
   }
   &--search-icon {
     color: grey;
+  }
+  &--addBoard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .main {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 20px;
+      }
+    }
+    .main * {
+      padding: 0 10px 0 0;
+    }
+
+    .down-arrow {
+      width: 17px;
+      height: 17px;
+    }
+    .home-icon {
+      height: 25px;
+      width: 25px;
+    }
+    .addItem {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  &--inputbar {
+    background-color: #d8f7ff;
+    color: #00a0ca;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: none;
+    margin-left: 40px;
+    font-size: 15px;
+    width: 200px;
+    &::placeholder {
+      color: #00a0ca;
+    }
   }
 }
 
@@ -74,12 +119,26 @@ h4 {
   border-width: 0 1px 1px 0;
   display: inline-block;
   padding: 3px;
-  
 }
 
 .left {
   transform: rotate(135deg);
   position: absolute;
   top: 10px;
-  left: 12px;
+  left: 10px;
+}
+
+.list {
+  list-style: none;
+}
+.list-item {
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.clicked {
+  background-color: #d8f7ff;
+  color: #00a0ca;
+  width: 200px;
 }
